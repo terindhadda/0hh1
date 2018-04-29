@@ -1,0 +1,128 @@
+[
+  //Functional - 1
+  {
+    "checkIsValid" : true,
+    "testBoard" : {
+      "size" : 4,
+      "contents" : {
+        "0" : ["e","e","e","e"],
+        "1" : ["e","e","e","e"],
+        "2" : ["e","e","e","e"],
+        "3" : ["e","e","e","e"]
+      }
+    },
+    "result" : [
+      {
+        "resultState": "SATISFIES",
+        "message": "",
+        "errorCoords": null
+      }
+    ]
+  },
+  //Functional - 2
+  {
+    "checkIsValid" : false,
+    "testBoard" : {
+      "size" : 4,
+      "contents" : {
+        "0" : ["b","b","r","r"],
+        "1" : ["b","r","b","r"],
+        "2" : ["r","r","b","b"],
+        "3" : ["r","b","r","b"]
+      }
+    },
+    "result" : [
+      {
+        "resultState": "SATISFIES",
+        "message": "",
+        "errorCoords": null
+      }
+    ]
+  },
+  //Functional - 3
+  {
+    "checkIsValid" : false,
+    "testBoard" : {
+      "size" : 4,
+      "contents" : {
+        "0" : ["b","b","r","r"],
+        "1" : ["b","b","r","r"],
+        "2" : ["r","r","b","b"],
+        "3" : ["r","b","r","b"]
+      }
+    },
+    "result" : [
+      {
+        "resultState": "VIOLATES",
+        "message": "",
+        "errorCoords": [
+          "(0, 0)", "(0, 1)", "(0, 2)", "(0, 3)",
+          "(1, 0)", "(1, 1)", "(1, 2)", "(1, 3)"
+        ]
+      },
+      {
+        "resultState": "VIOLATES",
+        "message": "",
+        "errorCoords": [
+          "(0, 1)", "(1, 1)", "(2, 1)", "(3, 1)"
+        ]
+      },
+      {
+        "resultState": "VIOLATES",
+        "message": "",
+        "errorCoords": [
+          "(0, 2)", "(1, 2)", "(2, 2)", "(3, 2)"
+        ]
+      }
+    ]
+  },
+  //Functional - 4
+  {
+    "checkIsValid" : true,
+    "testBoard" : {
+      "size" : 4,
+      "contents" : {
+        "0" : ["e","e","e","e"],
+        "1" : ["e","r","r","e"],
+        "2" : ["e","r","e","e"],
+        "3" : ["e","e","e","e"]
+      }
+    },
+    "result" : [
+      {
+        "resultState": "SATISFIES",
+        "message": "",
+        "errorCoords": null
+      }
+    ]
+  },
+  //Functional - 5
+  {
+    "checkIsValid" : true,
+    "testBoard" : {
+      "size" : 4,
+      "contents" : {
+        "0" : ["e","b","b","e"],
+        "1" : ["e","e","b","e"],
+        "2" : ["r","r","b","e"],
+        "3" : ["e","e","e","e"]
+      }
+    },
+    "result" : [
+      {
+        "resultState": "VIOLATES",
+        "message": "",
+        "errorCoords": [
+          "(0, 2)", "(1,2)", "(2, 2)", "(3, 2)"
+        ]
+      },
+      {
+        "resultState": "VIOLATES",
+        "message": "",
+        "errorCoords": [
+          "(0, 2)", "(1,2)", "(2, 2)"
+        ]
+      }
+    ]
+  }
+]
